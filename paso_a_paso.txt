@@ -1,0 +1,7 @@
+1 - Lo primero es acceder a la caperta del Proyecto y desde la terminal o interfaz por linea de comando accede al la capeta del proyecto y ejecutas este comando "npm init --yes". Esto Creara un archivo .json
+que es la informacion de nuestro archivo principal.
+
+2- {
+    
+    
+}

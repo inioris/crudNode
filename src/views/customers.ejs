@@ -1,0 +1,83 @@
+<% include partials/_header %>
+    <div class="container-fluid">
+
+                        <hr class="section">
+
+        <div class="row">
+        <!-- List Content -->
+            <div class="col m6 l6">
+                <div class="row">
+                    <h3 class="center">List Content</h3>
+                </div>
+                <div class="container">
+                        <hr>
+                    </div>
+                <table>
+                        <thead>
+                          <tr>
+                             <th>N°</th>
+                              <th>Name</th>
+                              <th>Address</th>
+                              <th>Phone</th>
+                              <th>Actions</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                            <% if (data) { %>
+                            <% for(var i = 0; i < data.length; i++){ %>
+                               <tr>
+                                <td><%= (i + 1) %></td>
+                                <td><%= data[i].name %></td>
+                                <td><%= data[i].address %></td>
+                                <td><%= data[i].phone %></td>
+                                <td>
+                                    <a class="btn" href="">Update</a>
+                                    <a class="btn red" href="/delete/<%= data[i].id %>">Delete</a>
+                                </td>
+                              </tr> 
+                            <% } %>
+                           <% } %>
+                        </tbody>
+
+                </table>
+                
+            </div>
+            <!-- Add Content -->
+            <div class="col m6 l6 white">
+                <div class="row ">
+                <div class="row">
+                    <h3 class="center">Add Content</h3>
+                </div>
+                    <div class="container">
+                        <hr>
+                    </div>
+                
+                <div class="row">
+                    <div class="container">
+                    <form action="/add" method="POST">
+                        <div class="row">
+                            <div class="input-field">
+                              <input name="name" type="text" class="validate" required>
+                              <label for="name">First Name</label>
+                            </div>
+                            <div class="input-field">
+                              <input name="address" type="text" class="validate" required>
+                              <label for="direccion">Direccion</label>
+                            </div>
+                            <div class="input-field">
+                              <input name="phone" type="text" class="validate" required>
+                              <label for="telefono">Telefono</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button class="btn center" type="submit"> Guardar Datos </button>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<% include partials/_footer %>

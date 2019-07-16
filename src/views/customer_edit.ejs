@@ -1,0 +1,44 @@
+<% include partials/_header %>
+    <div class="container-fluid">
+
+                        <hr class="section">
+
+        <div class="row">
+            <!-- Add Content -->
+            <div class="col m6 l6 white">
+                <div class="row ">
+                <div class="row">
+                    <h3 class="center">Add Content</h3>
+                </div>
+                    <div class="container">
+                        <hr>
+                    </div>
+                
+                <div class="row">
+                    <div class="container">
+                    <form action="/add" method="POST">
+                        <div class="row">
+                            <div class="input-field">
+                              <input name="name" type="text" class="validate" required>
+                              <label for="name">First Name</label>
+                            </div>
+                            <div class="input-field">
+                              <input name="address" type="text" class="validate" required>
+                              <label for="direccion">Direccion</label>
+                            </div>
+                            <div class="input-field">
+                              <input name="phone" type="text" class="validate" required>
+                              <label for="telefono">Telefono</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button class="btn center" type="submit"> Guardar Datos </button>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<% include partials/_footer %>
